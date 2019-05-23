@@ -41,19 +41,19 @@ function BlackJack() {
         }
         if (end) {
             console.log("Ganaste");
-            mostrarPuntuacion(player,crupier,playerScore,crupierScore);
+            showResult(player,crupier,playerScore,crupierScore);
             break;
         }
 
         if (compareScore(playerScore, crupierScore)) {
             end = true;
             console.log("Ganaste");
-            mostrarPuntuacion(player,crupier,playerScore,crupierScore);
+            showResult(player,crupier,playerScore,crupierScore);
             break;
         }
         else {
             console.log("Perdiste");
-            mostrarPuntuacion(player,crupier,playerScore,crupierScore);
+            showResult(player,crupier,playerScore,crupierScore);
             break;
         }
     }
@@ -115,7 +115,7 @@ function calculateScore(card) {
     return score;
 }
 
-function mostrarPuntuacion(player,crupier,playerScore,crupierScore) {
+function showResult(player,crupier,playerScore,crupierScore) {
     console.log("Cartas del Player", player);
     console.log("Cartas del Crupier", crupier);
     console.log("Puntiación player:", playerScore);
